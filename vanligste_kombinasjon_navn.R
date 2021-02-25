@@ -13,7 +13,7 @@ library(jtools)
 library(forcats)
 
 ## Path til dataene
-path <- "C:/Users/svenk/Desktop/NTNU/klassekampen/"
+path <- "YOUR_PATH" # Sett inn hvor data er lagret pÃ¥ din datamaskin
 
 ## Laster inn data
 jenter <- as_tibble(vroom(str_c(path, "fornavn_jenter.csv"), col_types = cols()))
@@ -21,14 +21,14 @@ gutter <- as_tibble(vroom(str_c(path, "fornavn_gutter.csv"), col_types = cols())
 etternavn <- as_tibble(vroom(str_c(path, "etternavn.csv"), col_types = cols()))
 
 # Befolkningsvariabel
-pop_norge <- 5391369 # Befolkning første kvartal 2020
+pop_norge <- 5391369 # Befolkning fÃ¸rste kvartal 2020
 
 # Renser data
 jenter$antall <- as.numeric(as.character(jenter$personer_2020))
 gutter$antall <- as.numeric(as.character(gutter$personer_2020))
 etternavn$antall <- as.numeric(etternavn$personer_2020)
 
-# Slår sammen fornavn gutter og jenter til en datatabell
+# SlÃ¥r sammen fornavn gutter og jenter til en datatabell
 gutter$kvinne <- 0
 jenter$kvinne <- 1
 fornavn <- rbind(gutter, jenter)
@@ -39,7 +39,7 @@ etternavn <- etternavn[1:20,]
 
 fornavn <- fornavn[with(fornavn,order(-antall)),]
 fornavn <- fornavn[1:20,]
-fornavn[3,"fornavn"] <- "Bjørn" #Setter in "ø" i navnet
+fornavn[3,"fornavn"] <- "BjÃ¸rn" #Setter in "Ã¸" i navnet
 
 
 
@@ -87,16 +87,16 @@ top_etternavn <- etternavn %>%
         axis.text.x = element_blank(),
         legend.position="bottom")
 
-### Del 2: Beregner sannsynlighet for å ha gitt kombinasjon fornavn og etternavn
+### Del 2: Beregner sannsynlighet for Ã¥ ha gitt kombinasjon fornavn og etternavn
 # p(kombinasjon) = p(fornavn) * p(etternavn)
 
 
-# Regner ut sannsynlighet for å ha et gitt fornavn eller etternavn
+# Regner ut sannsynlighet for Ã¥ ha et gitt fornavn eller etternavn
 fornavn$prop_fornavn <- (fornavn$antall/pop_norge)
 etternavn$prop_etternavn = (etternavn$antall/pop_norge)
 
 
-# Slår sammen alle mulige kombinasjoner av fornavn og etternavn
+# SlÃ¥r sammen alle mulige kombinasjoner av fornavn og etternavn
 idx <- rep(1:20, each = 20)
 fornavn_dup <- fornavn[idx,]
 
