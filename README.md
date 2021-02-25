@@ -1,4 +1,4 @@
-# vanligste_navn
+# Vanligste navn
 Denne siden inneholder kildekoden og data for å regne ut det vanligste navnet i Norge
 
 Kildekoden heter xx
