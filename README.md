@@ -1,7 +1,7 @@
 # Vanligste navn
 Denne siden inneholder kildekoden og data for å regne ut det vanligste navnet i Norge
 
-Kildekoden heter xx
+Kildekoden heter #### `vanligste_kombinasjon_navn.R`
 
 Alle data er hentet fra ssb.no
 
