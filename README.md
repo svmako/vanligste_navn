@@ -12,7 +12,7 @@ Det er tre input-filer
 
 Skriptet gir følgende output:
 - `vanligste_fornavn.jpeg` gir graf over de vanligste fornavnene i Norge
-- `vanlisgte_etternavn.jpeg` gir graf over de vanligste etternavnene i Norge
+- `vanligste_etternavn.jpeg` gir graf over de vanligste etternavnene i Norge
 - `vanligst_navnkomb.jpeg` gir graf over vanligste navnekombinasjon i Norge.
 
 Skriptet baserer seg på uniform sannsynlighetsmodell. Siden navnekombinasjoner er betinget (personer fra bestemte sosiale miljøer har høyere sannsynlighet for visse navnekombinasjoner enn andre), gir utregningene en riv ruskende gal sannsynlighet for navnekombinasjonene. Med andre ord: ikke bruk denne framgangsmåten til noe viktig. Men du kan la deg inspirere hvordan noe kan visualiseres.
