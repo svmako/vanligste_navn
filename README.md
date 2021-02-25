@@ -15,4 +15,4 @@ Skriptet gir følgende output:
 - vanlisgte_etternavn.jpeg gir graf over de vanligste etternavnene i Norge
 - vanligst_navnkomb.jpeg gir graf over vanligste navnekombinasjon i Norge.
 
-Skriptet baserer seg på uniform sannsynlighetsmodell. Siden navnekombinasjoner er betinget (personer fra bestemte sosiale miljøer har høyere sannsynlighet for visse navnekombinasjoner enner andre), gir utregningene en riv ruskende gal sannsynlighet for navnekombinasjonene. 
+Skriptet baserer seg på uniform sannsynlighetsmodell. Siden navnekombinasjoner er betinget (personer fra bestemte sosiale miljøer har høyere sannsynlighet for visse navnekombinasjoner enner andre), gir utregningene en riv ruskende gal sannsynlighet for navnekombinasjonene. Med andre ord: ikke bruk denne framgangsmåten til noe viktig, men la deg inspirere hvordan noe kan visualiseres.
