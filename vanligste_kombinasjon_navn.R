@@ -16,9 +16,9 @@ library(forcats)
 path <- "YOUR_PATH" # Sett inn hvor data er lagret på din datamaskin
 
 ## Laster inn data
-jenter <- as_tibble(vroom(str_c(path, "fornavn_jenter.csv"), col_types = cols()))
-gutter <- as_tibble(vroom(str_c(path, "fornavn_gutter.csv"), col_types = cols()))
-etternavn <- as_tibble(vroom(str_c(path, "etternavn.csv"), col_types = cols()))
+jenter <- as_tibble(vroom(str_c(path, "fornavn_jenter.csv"), col_types = cols())) # Liste over antall personer med bestemt jentenavn
+gutter <- as_tibble(vroom(str_c(path, "fornavn_gutter.csv"), col_types = cols())) # Liste over antall personer med bestemt guttenavn
+etternavn <- as_tibble(vroom(str_c(path, "etternavn.csv"), col_types = cols())) # Lister over antall personer med bestemt etternavn
 
 # Befolkningsvariabel
 pop_norge <- 5391369 # Befolkning første kvartal 2020
